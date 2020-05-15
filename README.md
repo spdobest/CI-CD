@@ -166,7 +166,122 @@ There are 2 ways integrate
 ![alt tag](https://github.com/spdobest/ContinuousIntegration/blob/master/Images/webHookVsPollScm6.png)   
 
 ## Setup Jenkins with Maven 
+- Downloadn Maven from internet 
+- install maven
+- add few Environment variables
+  - M2_HOME - path of the maven directory
+  - MAVEN_HOME - path of the maven directory
+  - PATH - add maven/bin path
+- Verify if maven is working or not
+  - in Command prompt type => mvn -v (it will print the maven verison)
+- GO to conf folder inside maven installation directory
+- open settings.xml
+- You will find something like local repository <localrepository>path/to/local/repository</localrepository>
+- Create a folder named maven_repo, copy the path
+- Copy the installation path and paste there like <localrepository>paste the above path here</localrepository>
+- Anytime a local repository will use, it will point to the above path
+## Setting Up Maven Project
+- Create a maven project in Eclipse/InteljIdea
+- open pom.xml file add Junit dependency
+- Create a simple class named Calculator
+- ```
+    public class JenkinsCalculator{
+      
+      public int add(int a, int b){
+        return a+b;
+      }
+      
+      public int multiply(int a, int b){
+        return a*b;
+      }
+    }
+  ```
+- Now write the test cases inside src/test/java
+- ```
+      public class JenkinsCalculatorTest{
+      
+      @Test
+      public void add(int a, int b){
+      JenkinsCalculator c = new JenkinsCalculator();
+        assertEquals(10,c.add(5,5))
+      }
+      
+      public void multiply(int a, int b){
+        JenkinsCalculator c = new JenkinsCalculator();
+        assertEquals(25,c.multiply(5,5))
+      }
+    }
+  ```
+- Now build the project and run the project
+- Execute the test cases
+- Once the project successfuly run, it will create a jar file
+## Jenkins Integration with Maven
+  
+## SonarQube installation 
+- Opensource Code Analysis Tool : It collects and analyze codes, measuring quality and providing report for your project.
+- Detailed Code Analysis Report : It offers report of duplicated code, Coding standards, Unit tests, Code coverage, code complexity, Comments, bugs and security volnerabilities.
+## Features of sonarQube
+![alt tag](https://github.com/spdobest/ContinuousIntegration/blob/master/Images/sonarqube.png) 
+![alt tag](https://github.com/spdobest/ContinuousIntegration/blob/master/Images/sonarQubeDashboard.png) 
+  
+## Steps to install
+-  Search sonarQube and download it from internet
+- Once unzip the file, you will see different configuration folder for linux, max, windows etc
+- If you are working in windows machine, open windos folder and run the .bat file through command line
+- in Command line type => startSonar.bat
+- If you get error that, Java is not setup
+- Go to conf folder open wrapper.conf file. there put the jdk path instead of java
+```
+  wrapper.java.command = C:\ProgramsFile\Java\Jdk1.8\bin\ 
+```
+- Now start the startSonar.bat fromcommand line
+- After successful start, type localhost:9000 (9000 is the default port for sonar qube)
+- Now enter admin and password (userid : admin, password : admin)
+- Now you will able to see the 
+## Code analysis with sonar Qube
+- Now we will implement sonarQube in the above maven project
+- Search Maven sonarQUbe plugin and add it to pom.xml file
+- Build the project.
+- After run the project, you will see the sonar Qube analysis will be triggered in an URL in console of eclipse IDE
+- Go to that url and check the analysis
+- Now on the sonarQube dashboard you can select the project and see the analysis of the project.
+- ```
+    public class JenkinsCalculator{
+      
+      public int add(int a, int b){
+      int x = 123;
+        return a+b;
+      }
+      
+      public int multiply(int a, int b){
+        return a*b;
+      }
+    }
+  ```
+- In the above source code i have an unused variable named x. After successful run the project, you will see the analysis of the project in the sonar Qube dashboard.
+- There you will see the unused variable name in the analysis part.
+- Now you can add the Java code coverage plugins in the pom.xml
+- By using this plugin, you will able to see the error and analysis of the code in the sonar QUbe dashboard
+- You will the percentage of code coverage
+  
+## Jenkins Integration with Sonar Qube 
+- Go to Jenkins dashboard, Right click on the Job and select configure
+- In then build section, in Goals and Options field put this : clean test sonar:sonar
+- Now apply and save and build the job
+- Go to the output console to check the sonar Qube analysis
+- You will trigger an localhost url for the sonarqube analysis
+- Now add the SonarQube scanner plugins in the job in jenkins
+- Restart the jenkins after successfully install of the above plugins
+- Now click on Manage Jenkins fromleft navigation of jenkins dashboard
+- Click Configure
+- In Sonar Qube Servers section (tick the Enable Injection option)
+- Click on add Sonar Qube, Name : SonarQube Default, Server Url: localhost:9000
+- click on save and apply
+  
+## Jenkins Integration with Selenium and testiNG
+  
+## Jenkins Integration with Tomcat forDeployment. 
+  
+  
 
-
-
-
+https://www.youtube.com/watch?v=jh7utASgKj4
