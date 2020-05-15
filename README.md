@@ -38,10 +38,10 @@ Continuous Deployment : This is closely related to continuous integration and re
 - Across Complete Life cycle : Jenkins supports the complete development lifecycle of software from building, testing, documenting the software , deployment and other stages of a software development lifecycle.
 - **Jenkins Plugins :** Jenkins plugins are at the heart of how jennies functions in achieving CICD. Jenkins is interconnected with well over 1,000 plugins that allow it to integrate with most of the development, testing and deployment tools. Refer https://plugins.jenkins.io/
   
-  https://github.com/spdobest/ContinuousIntegration/blob/master/Images/cicdWithJenkins4.png   
+  ![alt tag](https://github.com/spdobest/ContinuousIntegration/blob/master/Images/cicdWithJenkins4.png)   
 
 ## Jenkins Distributed Architecture
-https://github.com/spdobest/ContinuousIntegration/blob/master/Images/jenkins5.png   
+![alt tag](https://github.com/spdobest/ContinuousIntegration/blob/master/Images/jenkins5.png)   
   
 - Jenkins Pipeline
 - Build Pipeline
@@ -163,7 +163,7 @@ There are 2 ways integrate
 - You will see the output
 
 ## Which is better  
-https://github.com/spdobest/ContinuousIntegration/blob/master/Images/webHookVsPollScm6.png   
+![alt tag](https://github.com/spdobest/ContinuousIntegration/blob/master/Images/webHookVsPollScm6.png)   
 
 ## Setup Jenkins with Maven 
 
