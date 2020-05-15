@@ -281,7 +281,27 @@ There are 2 ways integrate
 ## Jenkins Integration with Selenium and testiNG
   
 ## Jenkins Integration with Tomcat forDeployment. 
+https://www.youtube.com/watch?v=jh7utASgKj4  
   
+## Jenkins Pipeline
+- It is a collection of pipes (Jobs) which are responsible to execute task one after another
+- ![alt tag](https://github.com/spdobest/ContinuousIntegration/blob/master/Images/pipeline1.png) 
+- ![alt tag](https://github.com/spdobest/ContinuousIntegration/blob/master/Images/pipeline2.png) 
+## Jenkins Delevery Pipeline integration
+- Create three jobs named -  build, test and deployment in jenkins
+- No link one Job to another
+- Right clickon test job and selct configure
+- In Build Triggers section, in Project to Watch field enter job name - build (Because we want to execute the test job after Build job complete)
+- Similarly select test job in Deployment Job Build Trigger section
+- Now install Delevery Pipeline plugin in Jenkins
+- After installation , click on + icon beside all in the dashboard
+- Pipeline name - MyBuildPipeLine,Now fill the default values and tat the end you can put the delevery pipeline job as Build Job
+- Now click on Build Job from dashboard, build now
+- Redirect MyBuildPipeLine tab in home dashboar. Now you will see this
+- ![alt tag](https://github.com/spdobest/ContinuousIntegration/blob/master/Images/pipeline3.png) 
   
+## Build Pipeline 
+- First Install Build Pipeline plugins in Jenkins
+- Click on the + icon on the dashboar beside All
+- Select Build Pipeline radio button and fill all the details
 
-https://www.youtube.com/watch?v=jh7utASgKj4
