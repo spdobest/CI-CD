@@ -1,4 +1,7 @@
-# Continuous Integration. 
+# CI CD
+- Important Links
+- https://www.edureka.co/blog/jenkins-master-and-slave-architecture-a-complete-guide/
+
 Process before Continuous Integration  
 ![alt tag](https://github.com/spdobest/ContinuousIntegration/blob/master/Images/cicd.png)    
 ## Drawbacks
