@@ -13,11 +13,11 @@ Process before Continuous Integration
 - It is a development practice where developers integrate code in a shared repository frequently, preferably several times a day.
 - Each integration can then be verified by an automated build and automated tests
 - One of the key benefits of integrating regularly is that you can detect errors and locate them more easily.
-- Continuous deployment and continuous inDelevery have developed as best-practice for keeping your application deployle ayt any point.  
+- Continuous deployment and continuous inDelevery have developed as best-practice for keeping your application deployle at any point.  
 ## CI CD 
 - **Continuous Integration  (CI):** This is the practice of integrating changes from different developers in the team into a mainlines early as possible, in best cases several times a day. Each integration can then be verified by an automated build and automated tests.
 - **Continuous Delivery (CD) :** This is the practice of keeping your codebase deployable at any point. Beyond making sure your application passes automated tests it has to have all the configuration necessary to push it into production.
-Continuous Deployment : This is closely related to continuous integration and refers to keeping your application deployable at any point or even automated releasing to a test or production environment if the latest version. Passes all automated tests.
+- **Continuous Deployment :** This is closely related to continuous integration and refers to keeping your application deployable at any point or even automated releasing to a test or production environment if the latest version. Passes all automated tests.
   
 ![alt tag](https://github.com/spdobest/ContinuousIntegration/blob/master/Images/cicd2.png)   
   
